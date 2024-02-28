@@ -1,0 +1,16 @@
+:root {
+    --site-color-blue-01: rgb(212, 231, 243);
+    --site-color-blue-02: rgb(52, 104, 138);
+    --site-color-blue-03: rgb(34, 70, 92);
+    --site-color-black: #0a0a23;
+}
+
+* {
+    margin: 0;
+}
+
+
+.App header{
+    background-color: var(--site-color-blue-02);
+    height: 8vh;
+}
