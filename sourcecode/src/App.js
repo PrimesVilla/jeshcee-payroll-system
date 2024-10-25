@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "@firebase/firestore";
-import {collection, getDocs} from "firebase/firestore";
-import {useState, useEffect} from 'react';
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
@@ -33,23 +32,23 @@ function App() {
       const data = await getDocs(recordsCollectionRef);
       console.log(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
       setRecords(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-    }
+    };
 
-    getRecords()
-  }, [])
+    getRecords();
+  }, []);
 
   return (
     <div className="App">
       <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' exact component={Home} />
-        <Route path='/admin' component={Admin} />
-        <Route path='/create' component={CreatePay} />
-        <Route path='/records' component={Records} />
-        <Route path='/about-us' component={AboutUs} />
-      </Routes>
-    </Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' exact element={<Home />} />
+          <Route path='/admin' element={<Admin />} />
+          <Route path='/create' element={<CreatePay />} />
+          <Route path='/records' element={<Records />} />
+          <Route path='/about-us' element={<AboutUs />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
