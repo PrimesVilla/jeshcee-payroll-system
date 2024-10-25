@@ -1,0 +1,93 @@
+/*Home.css*/
+
+.homeContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 10px;
+}
+
+h1{
+    color: rgb(32, 32, 32);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    font-weight: bolder;
+    width: 80%;
+}
+
+h1 span{
+    color: rgb(57, 192, 216);
+}
+
+p{
+    color: rgb(51, 54, 54);
+    font-family: 'Segoe UI',Arial, Helvetica, sans-serif;
+    font-size: 1.4rem; 
+    width: 100%;
+    height: 12rem;
+    padding: 40px 0;
+    text-align: justify;
+}
+
+
+.contain-main{
+    margin: 5vh;
+    width: auto;
+    padding: 5vh;
+}
+
+.home-logo {
+    width: auto;
+    height: auto;
+    background-image: url('../img/pexels2.jpg');
+    background-size:cover;
+    filter: brightness(95%);
+    background-attachment: fixed;
+}
+
+.button{
+    background-color: rgb(57, 192, 216);
+    border-radius: 100px;
+    border: 0px;
+    width: 400px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.button:hover{
+    background-color:rgb(42, 161, 182);
+}
+
+@media screen and (max-width: 650px) {
+    .homeContainer{
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .contain-main{
+        width: 15rem;
+        height: 100%;
+        margin: 0;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+
+    .button{
+        font-size: 2rem;
+        width: 15rem;
+    }
+}
