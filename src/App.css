@@ -1,0 +1,125 @@
+/*App.css*/
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+main{
+  display: flex;
+  justify-self: center;
+  background-color: rgb(212, 231, 243);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 45rem;
+}
+
+.navbar {
+  background: rgb(34, 70, 92);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  background-image: url('./img/jeshcee_logo.png');
+  background-size:cover;
+  background-position: center;
+  width: 15vh;
+}
+
+.fa-firstdraft {
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.nav-links {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+  background-color: rgb(52, 104, 138);
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+@media screen and (max-width: 650px) {
+  main{
+    width: 90%;
+  }
+
+  .navbar{
+    margin-bottom: 25rem;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  .navbar-logo{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-menu {
+    background-color: rgb(34, 70, 92);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20rem;
+    position: absolute;
+    top: 10vh;
+    opacity: 1;
+    transition: all 0.4s ease;
+  }
+
+  .nav-item{
+    height: auto;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-links:hover {
+  background-color: rgb(52, 104, 138);
+  border-radius: 4px;
+  transition: all 0.5s ease-out;
+}
+}
